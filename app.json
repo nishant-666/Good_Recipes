@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Goodfoods",
+    "slug": "Good_Foods",
+    "description": "A recipe app. ",
+    "privacy": "public",
+    "sdkVersion": "36.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.jpg",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.good.goodrecipes",
+      "versionCode": 1
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+  
+  }
+}
