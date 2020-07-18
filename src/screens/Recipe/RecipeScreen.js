@@ -12,7 +12,6 @@ import {
 import styles from './styles';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { getIngredientName, getCategoryName, getCategoryById } from '../../data/MockDataAPI';
-import BackButton from '../../components/BackButton/BackButton';
 import ViewIngredientsButton from '../../components/ViewIngredientsButton/ViewIngredientsButton';
 
 const { width: viewportWidth } = Dimensions.get('window');
@@ -20,12 +19,12 @@ const { width: viewportWidth } = Dimensions.get('window');
 export default class RecipeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      
-      headerLeft: () => <BackButton
-        onPress={() => {
-          navigation.goBack();
-        }}
-      />
+      headerStyle: {
+        backgroundColor: '#212121'
+        
+      },
+      headerTintColor: '#fff',
+    
     };
   };
 
@@ -98,7 +97,7 @@ export default class RecipeScreen extends React.Component {
             <TouchableHighlight
               onPress={() => navigation.navigate('RecipesList', { category, title })}
             >
-              <Text style={styles.category}>{getCategoryName(item.categoryId).toUpperCase()}</Text>
+              <Text style={styles.category}>Category: {getCategoryName(item.categoryId).toUpperCase()}</Text>
             </TouchableHighlight>
           </View>
 
@@ -124,11 +123,3 @@ export default class RecipeScreen extends React.Component {
     );
   }
 }
-
-/*cooking steps
-<View style={styles.infoContainer}>
-  <Image style={styles.infoPhoto} source={require('../../../assets/icons/info.png')} />
-  <Text style={styles.infoRecipe}>Cooking Steps</Text>
-</View>
-<Text style={styles.infoDescriptionRecipe}>{item.description}</Text>
-*/

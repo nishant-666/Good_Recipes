@@ -12,7 +12,12 @@ import { getRecipes, getCategoryName } from '../../data/MockDataAPI';
 export default class RecipesListScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      title: navigation.getParam('title')
+      title: navigation.getParam('title'),
+      headerStyle: {
+        backgroundColor: '#212121'
+        
+      },
+      headerTintColor: '#fff',
     };
   };
 

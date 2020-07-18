@@ -12,7 +12,12 @@ import { getNumberOfRecipes } from '../../data/MockDataAPI';
 
 export default class CategoriesScreen extends React.Component {
   static navigationOptions = {
-    title: 'Categories'
+    title: 'Categories',
+    headerStyle: {
+      backgroundColor: '#212121'
+      
+    },
+    headerTintColor: '#fff',
   };
 
   constructor(props) {

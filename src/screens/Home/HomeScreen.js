@@ -8,8 +8,13 @@ import { getCategoryName } from '../../data/MockDataAPI';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
-    title: 'Home',
-    headerLeft: () => <MenuImage
+    title: 'All Recipes',
+    headerStyle: {
+      backgroundColor: '#212121'
+      
+    },
+    headerTintColor: '#fff',
+    headerLeft: () => <MenuImage style={{color:'white'}}
       onPress={() => {
         navigation.openDrawer();
       }}

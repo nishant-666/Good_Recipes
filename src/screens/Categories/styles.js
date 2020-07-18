@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     borderColor: '#cccccc',
     borderWidth: 0.5,
     borderRadius: 20,
+    backgroundColor:'#ef5350',
   },
   categoriesPhoto: {
     width: '100%',
@@ -31,12 +32,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#333333',
+    color: 'white',
     marginTop: 8
   },
   categoriesInfo: {
-    marginTop: 3,
-    marginBottom: 5
+    marginTop: 5,
+    color: 'white',
+    
+    marginBottom: 8
   }
 });
 

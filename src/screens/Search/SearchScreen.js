@@ -27,30 +27,39 @@ export default class SearchScreen extends React.Component {
           }}
         />
       ),
+      headerStyle: {
+        backgroundColor: '#212121'
+        
+      },
+      headerTintColor: '#fff',
       headerTitle: (
         <SearchBar
           containerStyle={{
             backgroundColor: 'transparent',
             borderBottomColor: 'transparent',
+            
             borderTopColor: 'transparent',
             flex: 1
           }}
           inputContainerStyle={{
-            backgroundColor: '#EDEDED'
+            backgroundColor: '#EDEDED',
+            borderRadius: 70,
           }}
           inputStyle={{
             backgroundColor: '#EDEDED',
-            borderRadius: 50,
-            color: 'black'
+            
+            color: 'black',
+            
           }}
           searchIcond
           clearIcon
-          //lightTheme
-          round
+        
+          
           onChangeText={text => params.handleSearch(text)}
           //onClear={() => params.handleSearch('')}
           placeholder="Search any Recipe.. "
           value={params.data}
+         
         />
       )
     };
@@ -98,9 +107,9 @@ export default class SearchScreen extends React.Component {
   onPressRecipe = item => {
     this.props.navigation.navigate('Recipe', { item });
   };
-
+  
   renderRecipes = ({ item }) => (
-    <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressRecipe(item)}>
+    <TouchableHighlight underlayColor='white' onPress={() => this.onPressRecipe(item)}>
       <View style={styles.container}>
         <Image style={styles.photo} source={{ uri: item.photo_url }} />
         <Text style={styles.title}>{item.title}</Text>

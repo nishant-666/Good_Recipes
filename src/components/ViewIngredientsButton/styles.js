@@ -4,11 +4,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     height: 50,
-    width: 270,
+    width: 130,
     marginTop: 20,
     marginLeft: 10,
     marginRight: 10,
-    borderColor: '#212121',
+    borderColor: '#ef5350',
+    borderRadius:30,
     borderWidth: 1,
     justifyContent: 'center',
     alignItems: 'center'
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 14,
-    color: '#212121'
+    color: '#ef5350',
   }
 });
 
